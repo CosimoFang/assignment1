@@ -1,3 +1,7 @@
+# Dear professor, I want to ask for three days of time travel, since I got an important interview this Friday. 
+
+# I cannot resubmit on Gradescope after the deadline, so please check and grade this repo: https://github.com/CosimoFang/assignment1 after three days. Thanks again for the flexibility
+
 # assignment1
 Here is the video:
 
@@ -14,5 +18,7 @@ imgDisplay.cpp
 vidDisplay.cpp
 ```
 I add the extension function for user to save the modified images.
+
+
 
 
