@@ -16,10 +16,10 @@ I compile my code on Windows using Visual Studio Code
 Instructions for running your executables.
 If you want to redo the test, just run:
 ```
-imgDisplay.cpp
+imgDisplay.cpp {image_path}
 vidDisplay.cpp
 ```
-I add the extension function for user to save the modified images.
+I added the extension function for the user to save the modified images.
 
 
 
