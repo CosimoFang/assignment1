@@ -5,7 +5,7 @@
 ### I cannot resubmit on Gradescope after the deadline, so please check and grade this repo: https://github.com/CosimoFang/assignment1 after three days. Thanks again for the flexibility
 
 
-Here is the video:
+Here is the picture:
 
 <p align="center">
   <img src="img/img_dispaly.png" width="70%" height="70%">
