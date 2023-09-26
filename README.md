@@ -8,7 +8,7 @@
 Here is the video:
 
 <p align="center">
-  <img src="img/animation.gif" width="70%" height="70%">
+  <img src="img/img_dispaly.png" width="70%" height="70%">
 </p>
 
 I compile my code on Windows using Visual Studio Code
