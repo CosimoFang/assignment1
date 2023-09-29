@@ -1,7 +1,3 @@
-
-//the different filter
-
-
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
@@ -14,30 +10,26 @@
 #include <iostream>
 
 
-//question 2
 int greyscale(cv::Mat& src, cv::Mat& dst) {
-    //create new img
     dst.create(src.size(), src.type());
 
     for (int i = 0; i < src.rows; i++) {
-        //get old img row
         cv::Vec3b* row_src = src.ptr<cv::Vec3b>(i);
-        //get new img row
+
         cv::Vec3b* row_dst = dst.ptr<cv::Vec3b>(i);
 
         for (int j = 0; j < src.cols; j++) {
-            //assign blue channel from old img to rbg in new img
+
             int blue = row_src[j][0];
             row_dst[j][0] = blue;
             row_dst[j][1] = blue;
             row_dst[j][2] = blue;
         }
     }
-
     return 0;
 }
 
-// combine gx and gy by sqrt(gx^2 + gy^2)
+
 int magnitude(cv::Mat& sx, cv::Mat& sy, cv::Mat& dst) {
     dst.create(sx.size(), sx.type());
     int n = sx.rows;
@@ -57,7 +49,7 @@ int magnitude(cv::Mat& sx, cv::Mat& sy, cv::Mat& dst) {
 
 }
 
-//find sobel y by apply kernel to each 3x3 
+
 int sobelY3x3(cv::Mat& src, cv::Mat& dst) {
     dst.create(src.size(), src.type());
     float kernely[3][3] = 
@@ -88,7 +80,7 @@ int sobelY3x3(cv::Mat& src, cv::Mat& dst) {
     return 0;
 }
 
-//find sobel x by apply kernel to each 3x3 
+
 int sobelX3x3(cv::Mat& src, cv::Mat& dst) {
     dst.create(src.size(), src.type());
     float kernelx[3][3] = 
@@ -122,7 +114,6 @@ int sobelX3x3(cv::Mat& src, cv::Mat& dst) {
 }
 
 
-// blur the img by apply f to each 5x1 both vertical and horizontal.
 int blur5x5(cv::Mat& src, cv::Mat& dst) {
     dst.create(src.size(), src.type());
     cv::Mat temp;
@@ -156,7 +147,7 @@ int blur5x5(cv::Mat& src, cv::Mat& dst) {
     
     for (int j = 0; j < m; j++) {
         for (int i = 2; i < n - 2; i++) {
-            // stores the bgr value
+
             double pix[3] = { 0, 0, 0 };
             for (int k = -2; k < 3; k++) {
                 cv::Vec3b p = temp.at< cv::Vec3b>(i + k, j);
@@ -180,7 +171,7 @@ int blur5x5(cv::Mat& src, cv::Mat& dst) {
 }
 
 
-//blur the image with levels
+
 int blurQuantize(cv::Mat& src, cv::Mat& dst, int levels) {
 
     dst.create(src.size(), src.type());
@@ -197,35 +188,9 @@ int blurQuantize(cv::Mat& src, cv::Mat& dst, int levels) {
         }
     }
     return 0;
-
-
-
-
-}
-
-//reverse the color of img
-int reverseTheImg(cv::Mat& src, cv::Mat& dst) {
-
-    dst = src.clone();
-    
-    int n = dst.rows;
-    int m = dst.cols;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            for (int k = 0; k < 3; k++) {
-                dst.at<cv::Vec3b>(i, j)[k] = (255 - dst.at<cv::Vec3b>(i, j)[k]);
-            }
-        }
-    }
-    return 0;
-
-
-
-
 }
 
 
-//change img to cartoon
 int cartoon(cv::Mat& src, cv::Mat& dst, int levels, int magThreshold) {
     
     cv::Mat x;
@@ -255,7 +220,6 @@ int cartoon(cv::Mat& src, cv::Mat& dst, int levels, int magThreshold) {
     }
 
     return 0;
-    
 }
 
 

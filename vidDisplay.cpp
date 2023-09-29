@@ -1,6 +1,3 @@
-//the video real time funciton
-
-
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
@@ -41,7 +38,6 @@ int main(int argc, char* argv[]) {
 
         // see if there is a waiting keystroke
         char key = cv::waitKey(10);
-        // see what is the keystrok and change the status of the loop
         if (key == 'q') {
             break;
         }
@@ -62,9 +58,6 @@ int main(int argc, char* argv[]) {
         }
         if (key == 'c') {
             cond = 6;
-        }
-        if (key == 'r') {
-            cond = 7;
         }
 
         //given the status to change the output img
@@ -91,18 +84,13 @@ int main(int argc, char* argv[]) {
         else if (cond == 6) {
             cartoon(frame, p_image, 15, 15);
         }
-        else if (cond == 7) {
-            reverseTheImg(frame, p_image);
-        }
         else {
             p_image = frame;
         }
 
 
         //save file
-        if (key == 's') {
-            imwrite("/Users/Mark/Desktop/sampleImage.jpg", p_image);
-        }
+        if (key == 's') {imwrite("sample.jpg", p_image); }
 
 
         cv::imshow("Video", p_image);
@@ -112,5 +100,3 @@ int main(int argc, char* argv[]) {
     delete capdev;
     return(0);
 }
-
-

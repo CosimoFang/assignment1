@@ -2,27 +2,25 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <iostream>
+
 using namespace cv;
 using namespace std;
+
 int main(int argc, char** argv)
 {
-    if (argc != 2)
-    {
-        cout << " Usage: " << argv[0] << " ImageToLoadAndDisplay" << endl;
-        return -2;
-    }
-    Mat image;
-    image = imread(argv[1], IMREAD_COLOR); // Read the file
-    if (image.empty()) // Check for invalid input
-    {
-        cout << "Could not open or find the image" << std::endl;
+    if (argc != 2){return -2;}
+
+    Mat picture;
+    picture = imread(argv[1], IMREAD_COLOR);
+
+    if (picture.empty()) {
+        cout << "Cannnot find the image" << std::endl;
         return -1;
     }
-    namedWindow("Display window", WINDOW_AUTOSIZE); // Create a window for display.
-    imshow("Display window", image); // Show our image inside it.
-    waitKey(0); // Wait for a keystroke in the window
-    while (1) {
-        if (waitKey(100) == 113) break;
-    }
+
+    namedWindow("test", WINDOW_AUTOSIZE); 
+    imshow("test", picture); 
+    waitKey(0); 
+    while (waitKey(100) != 113) {}
     return 0;
 }
