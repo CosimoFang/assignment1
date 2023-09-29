@@ -1,25 +1,20 @@
 # assignment1
 
-### Dear professor, I want to ask for three days of time travel, since I got an important interview this Friday. 
+Here is the video for "[video display](https://drive.google.com/file/d/1iNuG2x6v54FPf6q6vyz6ijsNrHMb4mxc/view?usp=sharing)" and 
+"[img display]([https://drive.google.com/file/d/1iNuG2x6v54FPf6q6vyz6ijsNrHMb4mxc/view?usp=sharing](https://drive.google.com/file/d/1OnDuz_7_6KBcBnByVl5ak7xX-ZgAfGoB/view?usp=sharing))"
 
-### I cannot resubmit on Gradescope after the deadline, so please check and grade this repo: https://github.com/CosimoFang/assignment1 after three days. Thanks again for the flexibility
 
-
-Here is the picture:
-
-<p align="center">
-  <img src="img/img_dispaly.png" width="70%" height="70%">
-</p>
-
-I compile my code on Windows using Visual Studio Code
+I compile my code on Windows11 using Visual Studio Code
 
 Instructions for running your executables.
 If you want to redo the test, just run:
 ```
-imgDisplay.cpp {image_path}
-vidDisplay.cpp
+imgDisplay.exe {image_path}
+vidDisplay.exe
 ```
-I added the extension function for the user to save the modified images.
+No extension modules
+
+No time travel days
 
 
 
