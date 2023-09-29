@@ -36,7 +36,6 @@ int main(int argc, char* argv[]) {
             break;
         }
 
-        // see if there is a waiting keystroke
         char key = cv::waitKey(10);
         if (key == 'q') {
             break;
@@ -60,7 +59,6 @@ int main(int argc, char* argv[]) {
             cond = 6;
         }
 
-        //given the status to change the output img
         Mat p_image;
         if (cond == 1) {
             cvtColor(frame, p_image, COLOR_RGBA2GRAY, 0);
@@ -88,8 +86,6 @@ int main(int argc, char* argv[]) {
             p_image = frame;
         }
 
-
-        //save file
         if (key == 's') {imwrite("sample.jpg", p_image); }
 
 
