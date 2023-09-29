@@ -1,7 +1,6 @@
 # assignment1
 
-Here is the video for "[video display](https://drive.google.com/file/d/1iNuG2x6v54FPf6q6vyz6ijsNrHMb4mxc/view?usp=sharing)" and 
-"[img display](https://drive.google.com/file/d/1OnDuz_7_6KBcBnByVl5ak7xX-ZgAfGoB/view?usp=sharing)"
+Here is the video for "[display](https://drive.google.com/file/d/1B1qKyoNhquJqnnlxIfxcyRRzTNT-NtDW/view?usp=sharing)" 
 
 
 I compile my code on Windows11 using Visual Studio Code
