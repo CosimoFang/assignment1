@@ -13,6 +13,8 @@ If you want to redo the test, just run:
 imgDisplay.exe {image_path}
 vidDisplay.exe
 ```
+(In case that the exe cannot be run correctly, I add some required opencv lib on the same directory)
+
 No extension modules
 
 No time travel days
